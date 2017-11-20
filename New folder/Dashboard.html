@@ -1,0 +1,71 @@
+<html>
+	<head>
+	</head>
+	<center/>
+	<body>
+		<table width="50%" height="75%" cellspacing="2" cellpadding="10" border="0" align="center" bgcolor="black">
+			<tr bgcolor="white" height="15%" >
+				<td align="right" colspan="2">
+					<img src="AK.png" alt="ANIKA KHALED" height="40" width="100" align="left">
+					Logged in as <a href="Vprofile.php">Anika</a>
+					| <a href="Home.html">Logout</a>
+				</td>
+			</tr>
+			<tr bgcolor="white" height="80">
+				<td width="35%">
+				<font size="4">
+					<b>Account</b><br><hr>
+					<ul>
+						<li><a href="Dashboard.html">Dashboard</a></li>
+						<li><a href="Vprofile.php">View Profile</a></li>
+						<li><a href="Edit.html">Edit Profile</a></li>
+						<li><a href="Chpropic.html">Change Profile Picture</a></li>
+						<li><a href="Chpass.html">Change Password</a></li>
+						<li><a href="Home.html">Logout</a></li>
+					</ul><br>
+					
+					<b>Admin Panel</b><br><hr>
+					<ul>
+						<li><a href="User.html">Add User</a></li>
+					</ul>
+					
+					<b>User Panel</b><br><hr>
+					<ul>
+						<li><a href="CList.html">Company List</a></li>
+						<li><a href="Blacklist.html">Blacklisted Medicines</a></li>
+						<li><a href="Contact.html">Contact Admin</a></li>
+					</ul>
+					
+				</font>
+				</td >
+				<td width="70%">
+					<font size="4.5">
+						<h2>Welcome Anika</h2>
+					</font>
+				</td>
+			</tr>
+			<tr bgcolor="white" height="3%">
+				<td colspan = "3" align="center">
+				<font size="3">
+					Copyright @ 2017
+				</font>
+				</td >
+			</tr>
+		</table>
+	</body>
+</html>
+
+<?php
+	session_start();
+	
+		if(!$_SESSION['logged'])
+		{
+			echo "You need to Log in first !!!";
+			
+		}
+		else
+		{
+			header('Location: Dashboard.html');
+		}
+
+?>
