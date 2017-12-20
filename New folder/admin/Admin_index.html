@@ -1,31 +1,45 @@
-<html>
-<head>
-	<title>Admin Panel</title>
-</head>
-<body>
-	<center>
-		
-		<table width="40%" align="center" cellspacing="0" cellpadding="10" border="2" bgcolor="white">
-      <tr bgcolor="white">
-        <td height="90" colspan="3">
-        	<div align="right">
-    		<font size="4">
-			<a href="Admin_interface.html" target="contentFrame">
-		<img src="Capture.png" align="left" alt="SHEBA" width="100" height="80"></a>
-					Logged in as <a href="Admin_profile.html" target="contentFrame">Admin</a> |
-							<a href="Admin_interface.html" target="contentFrame">Home</a> |
-							<a href="settings.html" target="contentFrame">Settings</a> |
-							<a href="../web_index.html">Logout</a>
-			</font>
-		</div>
+
+
+<table width="100%" cellspacing="0" cellpadding="10" border="1">
+    <tr>
+        <td colspan="2" valign="middle" height="70">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <a href="../dashboard.html" target="contentFrame">
+                            <img alt="SHEBA" width="100" height="80" src="Capture.png">
+                        </a>
+                    </td>
+                    <td align="right">
+                        Logged in as <a href="Admin_profile.html" target="contentFrame">Admin</a>&nbsp;|
+                        <a href="settings.html" target="contentFrame">Settings</a>&nbsp;|
+                        <a href="../web_index.html">Logout</a>
+                    </td>
+                </tr>
+            </table>
         </td>
-        </tr>
-		<tr>
-			<td colspan="3">
-            <iframe name="contentFrame" frameborder="0" width="100%" height="430" src="Admin_interface.html"></iframe>			
-			</td>
-		</tr>
-		</table>
-	</center>
-</body>
-</html>
+    </tr>
+    <tr>
+        <td width="200" valign="top">
+        	<font size="4">
+        	<ul>
+        	<li><a href="../dashboard.html" target="contentFrame">Dashboard</a></li>
+        	<li><a href="Notifications.html" target="contentFrame"><label>Notifications</label></a></li>
+            <li><a href="User_Management.html" target="contentFrame"><label>User Management</label></a></li>
+            <li><a href="Pharmacy_Management.html" target="contentFrame"><label>Pharmacy Management</label></a></li>
+            <li><a href="User_reports.html" target="contentFrame"><label>User Report</label></a></li>
+            <li><a href="Pharmacy_reports.html" target="contentFrame"><label>Pharmacy Report</label></a></li>
+            <li><a href="registration.html" target="contentFrame"><label>Add New Admin</label></a></li>
+        	</ul>
+        </font>
+        </td>
+        <td valign="top">
+            <iframe name="contentFrame" frameborder="0" width="100%" height="530" src="../dashboard.html"></iframe>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            Copyright &copy; 2017
+        </td>
+    </tr>
+</table>
