@@ -1,13 +1,13 @@
 
 
-<table width="100%" cellspacing="0" cellpadding="10" border="1">
+<table width="70%" cellspacing="0" cellpadding="10" border="1" align="center">
     <tr>
-        <td colspan="2" valign="middle" height="70">
+        <td colspan="2" valign="middle" height="30">
             <table width="100%">
                 <tr>
                     <td>
                         <a href="../dashboard.html" target="contentFrame">
-                            <img alt="SHEBA" width="100" height="80" src="Capture.png">
+                            <img alt="SHEBA" width="130" height="70" src="Capture.png">
                         </a>
                     </td>
                     <td align="right">

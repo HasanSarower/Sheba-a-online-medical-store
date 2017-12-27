@@ -19,34 +19,46 @@
         $user_role="customer";
 
          $isValid = true;
-        // if(empty($email)){
-        //     $isValid = false;
-        //     $emailErr = "*";
-        // }
-        // else if(isValidEmail($email)==false){
-        //     $isValid = false;
-        //     $emailErr = "Invalid email format";
-        // }
+        if(empty($email)){
+            $isValid = false;
+            $emailErr = "*";
+        }
+        else if(isValidEmail($email)==false){
+            $isValid = false;
+            echo "Invalid email format<br/>";    
+        }
+        else if(isUniquePersonEmail($email)==false){
+            $isValid = false;
+            echo "Email is not unique<br/>";
+        }
         
-        // if(empty($name)){
-        //     $isValid = false;
-        //     $nameErr = "*";
-        // }
-        // else if(isValidPersonName($name)==false){
-        //     $isValid = false;
-        //     $nameErr = "At least two words required, Only letters and white space allowed";
-        // }
-        
+        if(empty($name)){
+            $isValid = false;
+            $nameErr = "*";
+        }
+        else if(isValidPersonName($name)==false){
+            $isValid = false;
+           echo "name must contain at least two words<br/>";
+        }
+
+        if(isUniquePersonUserName($uName)==false){
+            $isValid = false;
+            echo "user name must be unique<br/>";
+        }
+        if(strlen($pswrd)<8)
+        {
+            $isValid = false;
+            echo "Password must not be less than eight (8) characters<br/>";
+        }
         if($isValid==true){
             $person['name'] = $name;
             $person['email'] = $email;
-             $person['userName'] = $uName;
-              $person['password'] = $pswrd;
-               $person['gender'] = $gender;
-                $person['dob'] = $dob;
-                 $person['blood'] = $blood_group;
-                  $person['role'] = $user_role;
-                    //var_dump($person);
+            $person['userName'] = $uName;
+            $person['password'] = $pswrd;
+            $person['gender'] = $gender;
+            $person['dob'] = $dob;
+            $person['blood'] = $blood_group;
+            $person['role'] = $user_role;
 
 
 
@@ -157,15 +169,6 @@
                 </td>
                 <td></td>
             </tr>
-            <!-- <tr><td colspan="4"><hr/></td></tr>
-            <tr>
-                <td>Role</td>
-                <td>:</td>
-                <td>   
-                    <input name="role" type="text">
-                </td>
-                <td></td>
-            </tr> -->
         </table>
         <hr/>
         <input type="submit" value="Submit">

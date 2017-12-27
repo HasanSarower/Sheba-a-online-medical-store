@@ -8,6 +8,10 @@
 	{
         return editMedicineToDb($medicine);
     }
+    function buyMedicine($medicine)
+    {
+        return buyMedicineToDb($medicine);
+    }
     function removeMedicine($medicineId){
         return removeMedicineFromDb($medicineId);
     }
@@ -30,4 +34,7 @@
     	return getMedicineByGenericFromDb($Generic);
     }
 
+    function addOrder($order){
+        return addOrderToDb($order);
+    }
 ?>

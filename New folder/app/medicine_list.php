@@ -26,7 +26,7 @@
 
 <body>
 	<fieldset>
-		 <legend>Retrieve</legend>
+		 <legend>List of Medicines</legend>
 		  <form method="POST">
 		  		<input type="submit" value="SEARCH"/>
                 <input name="search" value="<?= $searchKey ?>"/> By
@@ -37,7 +37,7 @@
                 </select>
 		  </form>
 
-		<table width="80%" border="1" cellspacing="0" cellpadding="5">
+		<table width="80%" height="80%" border="1" cellspacing="0" cellpadding="5">
         <tr>
             <th>Id</th>
             <th>Name</th>
@@ -59,13 +59,11 @@
                 <td><?= $medicine['generic'] ?></td>
                 <td><?= $medicine['price'] ?></td>
                 <td><?= $medicine['quantity'] ?></td>
-                <td><a href="update_medicine.php?id=<?= $medicine['id'] ?>">edit</a></td>
-                <td><a href="delete_medicine.php?id=<?= $medicine['id'] ?>">delete</a></td>
+                <td><a href="buy_medicine.php?id=<?= $medicine['id'] ?>">buy</a></td>
             </tr>
         <?php }
          ?>
         </table>
-         <a href="add_delete_meds.php">Back</a>
 	</fieldset>
 </body>
 </html>

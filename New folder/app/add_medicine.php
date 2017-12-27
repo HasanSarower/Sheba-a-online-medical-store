@@ -1,36 +1,3 @@
-<html>
-		<head>
-			<title>add medicine</title>
-		</head>
-	<body>
-		<fieldset>This is message box
-            
-<?php require_once "../service/medicine_service.php";?> 
-<?php
-    if($_SERVER['REQUEST_METHOD']=="POST"){
-        $medname=trim($_POST['medName']);
-        $indiCation = trim($_POST['indication']);
-        $generic = trim($_POST['generic']);
-
-        $medicine['medName'] = $medname;
-        $medicine['indication'] = $indiCation;
-        $medicine['generic'] = $generic;
-
-        if (addMedicine($medicine) == true) {
-            echo "<script>
-                     alert('Record Added');
-                    </script>";
-            die();
-        }
-        else{
-            echo "Internal issue<br/>";
-        }
-
-    }
-?>
-
-        </fieldset>
-<br />
 <fieldset>
     <legend><b>Add Medicine</b></legend>
 
@@ -48,7 +15,7 @@
                 <td>:</td>
                 <td><input name="medName" type="text"></td>
                 <td></td>
-            </tr>		
+            </tr>       
             <tr><td colspan="4"><hr/></td></tr>
             <tr>
                 <td>Instruction</td>
@@ -57,20 +24,62 @@
                     <textarea name="indication" type="text"></textarea>    
                 </td>
                 <td></td>
-            </tr>		
+            </tr>       
             <tr><td colspan="4"><hr/></td></tr>
             <tr>
                 <td>Generic</td>
                 <td>:</td>
                 <td><input name="generic" type="text"></td>
                 <td></td>
-            </tr>		           
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr>
+                <td>Price</td>
+                <td>:</td>
+                <td><input name="price" type="text"></td>
+                <td></td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr>
+                <td>Quantity</td>
+                <td>:</td>
+                <td><input name="quantity" type="text"></td>
+                <td></td>
+            </tr>                  
         </table>
         <hr/>
-        <input type="submit" value="Submit">
-        <a href="retrieve.php">Preview data</a>
+        <input type="submit" value="Submit">&nbsp;
+        <a href="retrieve_medicine.php">Preview data</a>
     </form>
 </fieldset>
 <a href="add_delete_meds.php">Back</a>
-		</body>
-</html>
+
+<?php require_once "../service/medicine_service.php";?> 
+<?php
+    if($_SERVER['REQUEST_METHOD']=="POST"){
+        $medname=trim($_POST['medName']);
+        $indiCation = trim($_POST['indication']);
+        $generic = trim($_POST['generic']);
+        $medPrice = trim($_POST['price']);
+        $medQuantity = trim($_POST['quantity']);
+
+        $medicine['medName'] = $medname;
+        $medicine['indication'] = $indiCation;
+        $medicine['generic'] = $generic;
+        $medicine['price'] = $medPrice;
+        $medicine['quantity'] = $medQuantity;
+
+        if (addMedicine($medicine) == true) {
+            echo "<script>
+                     alert('Record Added');
+                    </script>";
+            die();
+        }
+        else{
+            echo "Internal issue<br/>";
+        }
+
+    }
+?>
+
+

@@ -47,6 +47,18 @@
         }
         return $isUnique;
     }
+
+    function isUniquePersonUserName($personUName){
+        $persons  = getAllPersons();
+        $isUnique = true;
+        foreach($persons as $person){
+            if($person['uName']==$personUName){
+                $isUnique = false;
+                break;
+            }
+        }
+        return $isUnique;
+    }
     
     function isUniquePersonEmailForUpdate($personId, $personEmail){
         $persons  = getAllPersons();

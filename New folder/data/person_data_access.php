@@ -13,19 +13,19 @@
     }
     
     function editPersonToDb($person){
-        $sql = "UPDATE person SET name='$person[name]', email='$person[email]', uName='$person[userName]', pswrd='$person[password]', gender='$person[gender]', dob='$person[dob]', blood_group='$person[blood]', role='$person[role]' WHERE id=$person[id]";
+        $sql = "UPDATE customer SET name='$person[name]', email='$person[email]', uName='$person[userName]', pswrd='$person[password]', gender='$person[gender]', dob='$person[dob]', blood_group='$person[blood]', role='$person[role]' WHERE id=$person[id]";
         $result = executeSQL($sql);
         return $result;
     }
     
     function removePersonFromDb($personId){
-        $sql = "DELETE FROM person WHERE id=$personId";        
+        $sql = "DELETE FROM customer WHERE id=$personId";        
         $result = executeSQL($sql);
         return $result;
     }
     
     function getAllPersonsFromDb(){
-        $sql = "SELECT * FROM person";        
+        $sql = "SELECT * FROM customer";        
         $result = executeSQL($sql);
         
         $persons = array();
@@ -37,7 +37,7 @@
     }
     
     function getPersonByIdFromDb($personId){
-        $sql = "SELECT * FROM person WHERE id=$personId";        
+        $sql = "SELECT * FROM customer WHERE id=$personId";        
         $result = executeSQL($sql);
         
         $person = mysqli_fetch_assoc($result);
@@ -55,7 +55,7 @@
     }    
 
     function getPersonsByNameFromDb($personName){
-        $sql = "SELECT * FROM person WHERE name LIKE '%$personName%'";
+        $sql = "SELECT * FROM customer WHERE uName LIKE '%$personName%'";
         $result = executeSQL($sql);
         
         $persons = array();
@@ -67,7 +67,7 @@
     }
     
     function getPersonsByEmailFromDb($personEmail){
-        $sql = "SELECT * FROM person WHERE email LIKE '%$personEmail%'";
+        $sql = "SELECT * FROM customer WHERE email LIKE '%$personEmail%'";
         $result = executeSQL($sql);
         
         $persons = array();
@@ -79,7 +79,7 @@
     }
     
     function getPersonsByNameOrEmailFromDb($key){
-        $sql = "SELECT * FROM person WHERE name LIKE '%$key%' OR email LIKE '%$key%'";
+        $sql = "SELECT * FROM customer WHERE name LIKE '%$key%' OR email LIKE '%$key%'";
         $result = executeSQL($sql);
         
         $persons = array();

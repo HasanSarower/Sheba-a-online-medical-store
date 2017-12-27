@@ -2,19 +2,26 @@
 <?php
 	function addMedicineToDb($medicine)
 	{
-		$sql = "INSERT INTO medicine (id,med_name,indication,generic) VALUES (NULL,'$medicine[medName]','$medicine[indication]','$medicine[generic]')";
+		$sql = "INSERT INTO medicine (id,med_name,indication,generic,price,quantity) VALUES (NULL,'$medicine[medName]','$medicine[indication]','$medicine[generic]','$medicine[price]','$medicine[quantity]')";
 		 $result = executeSQL($sql);
         return $result;
 	}
+
+     function addOrderToDb($order){
+        $sql = "INSERT INTO order_report (orderId, orderName, orderQuantity, orderCost) VALUES (NULL, '$order[medName]', '$order[quantity]', '$order[total_q]')";
+        $result = executeSQL($sql);
+        return $result;
+    }
+
 	function editMedicineToDb($medicine)
 	{
-		$sql = "UPDATE medicine SET med_name='$medicine[medName]', indication='$medicine[indication]',generic='$medicine[generic]' WHERE id=$medicine[id]";
+		$sql = "UPDATE medicine SET med_name='$medicine[medName]', indication='$medicine[indication]',generic='$medicine[generic]', price='$medicine[price]', quantity='$medicine[quantity]' WHERE id=$medicine[id]";
         $result = executeSQL($sql);
         return $result;
 	}
 	function removeMedicineFromDb($medicineID)
 	{
-		$sql = "DELETE FROM medicine WHERE med_name='$medicine[medName]', indication='$medicine[indication]',generic='$medicine[generic]' WHERE id=$medicine[id]";
+		$sql = "DELETE FROM medicine WHERE id=$medicineID";
         $result = executeSQL($sql);
         return $result;
 	}

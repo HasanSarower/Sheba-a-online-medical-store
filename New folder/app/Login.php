@@ -4,6 +4,7 @@
 <a href="../interface.html">HOME</a>
 <hr/>
 <?php
+    session_start();
     $uname = $password = $role = "";
     $nameErr = $emailErr = "";
 ?>
@@ -20,23 +21,22 @@
 
         if($login['role']=="customer")
         {
-        	echo "<script>
-                        document.location='../user_index.html';
-                     </script>";
-                die();
-        }
+              $_SESSION['uName'] = $login['uName'];
+              header("location:user_index.php");
+         }
         elseif($login['role']=="admin") 
     	{
         	echo "<script>
-                        document.location='../admin/Admin_index.html';
+                        document.location='../admin/Admin_index.php';
                      </script>";
                 die();
+
         }
         else
         {
         	echo "<script>
                         alert('incorrect username or password !!!');
-                        document.location='Login.php';
+                        document.location='../web_index.html';
                      </script>";
                 die();
         }
