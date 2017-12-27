@@ -35,6 +35,18 @@
         
         return $persons;
     }
+
+    function getPersonByCountFromDb(){
+        $sql = "SELECT * FROM customer ORDER BY buy_count DESC ";        
+        $result = executeSQL($sql);
+		
+		$persons = array();
+        for($i=0; $row=mysqli_fetch_assoc($result); ++$i){
+            $persons[$i] = $row;
+        }
+        
+        return $person;
+    }
     
     function getPersonByIdFromDb($personId){
         $sql = "SELECT * FROM customer WHERE id=$personId";        
