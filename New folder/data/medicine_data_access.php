@@ -81,4 +81,15 @@
         
         return $medicine;
     }
+function getMedByCountFromDb(){
+        $sql = "SELECT * FROM medicine ORDER BY sell_count DESC ";        
+        $result = executeSQL($sql);
+		
+		$persons = array();
+        for($i=0; $row=mysqli_fetch_assoc($result); ++$i){
+            $persons[$i] = $row;
+        }
+        
+        return $person;
+    }
 ?>
