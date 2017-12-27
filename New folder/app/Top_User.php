@@ -47,4 +47,4 @@ mysqli_close($con);
 
 ?>
 
-Back to <a href="./app/dashboard.html">Dashboard</a>
+Back to <a href="../admin/dashboard.html">Dashboard</a>
