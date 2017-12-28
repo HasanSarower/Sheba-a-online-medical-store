@@ -31,6 +31,11 @@
         //     $isValid = false;
         //     $nameErr = "At least two words required, Only letters and white space allowed";
         // }
+		if($_POST['password'] != $_POST['confirmPassword'])
+		{
+			$isValid = false;
+			echo "Password not matched";
+		}
         
         if($isValid==true){
              $person['userName'] = $uName;
@@ -46,7 +51,7 @@
             if(addPerson($person)==true){
                 echo "<script>
                         alert('Record Added');
-                        document.location='AdminReg.php';
+                        document.location='userReg.php';
                      </script>";
                 die();
             }
@@ -55,6 +60,13 @@
             }
         }
     }
+?>
+<?php
+	if(!$_POST['password'] == $_POST['confirmPassword'])
+		{
+			$isValid = false;
+			echo "Password not matched";
+		}
 ?>
 
 <fieldset>ADD New Admin Credentials</fieldset>
