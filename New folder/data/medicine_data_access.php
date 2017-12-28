@@ -8,10 +8,16 @@
 	}
 
      function addOrderToDb($order){
-        $sql = "INSERT INTO order_report (orderId, orderName, orderQuantity, orderCost) VALUES (NULL, '$order[medName]', '$order[quantity]', '$order[total_q]')";
+	$sql = "INSERT INTO order_report (orderId, orderName, orderQuantity, orderCost) VALUES (NULL, '$order[medName]', '$order[quantity]', '$order[total_q]')";
+	$result = executeSQL($sql);
+	return $result;
+    }
+
+	function donateBLoodToDb($blood){
+        $sql = "INSERT INTO donate_blood (donor_id, donar_name, donar_BG, donar_contact, donar_area) VALUES (NULL, '$blood[name]', '$blood[bg]', '$blood[contact]', '$blood[area]')";
         $result = executeSQL($sql);
         return $result;
-    }
+   	 }
 
 	function editMedicineToDb($medicine)
 	{
