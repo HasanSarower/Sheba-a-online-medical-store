@@ -40,7 +40,7 @@
         </table>
         <hr/>
         <input type="submit" value="Submit">&nbsp;
-        <a href="otherProducts.php">Preview data</a>
+        <a href="./retrieve_product.php">Preview data</a>
     </form>
 </fieldset>
 <a href="add_delete_products.php">Back</a>
