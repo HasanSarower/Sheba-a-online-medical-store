@@ -6,7 +6,7 @@
             <table width="100%">
                 <tr>
                     <td>
-                        <a href="../app/dashboard.html" target="contentFrame">
+                        <a href="./dashboard.html" target="contentFrame">
                             <img alt="SHEBA" width="100" height="80" src="Capture.png">
                         </a>
                     </td>
@@ -23,7 +23,7 @@
         <td width="200" valign="top">
         	<font size="4">
         	<ul>
-        	<li><a href="../app/dashboard.html" target="contentFrame">Dashboard</a></li>
+        	<li><a href="./dashboard.html" target="contentFrame">Dashboard</a></li>
         	<li><a href="Notifications.html" target="contentFrame"><label>Notifications</label></a></li>
             <li><a href="User_Management.html" target="contentFrame"><label>User Management</label></a></li>
             <li><a href="User_reports.html" target="contentFrame"><label>User Report</label></a></li>
@@ -36,7 +36,7 @@
         </font>
         </td>
         <td valign="top">
-            <iframe name="contentFrame" frameborder="0" width="100%" height="530" src="../app/dashboard.html"></iframe>
+            <iframe name="contentFrame" frameborder="0" width="100%" height="530" src="./dashboard.html"></iframe>
         </td>
     </tr>
     <tr>
