@@ -105,7 +105,7 @@
             <?php } ?>
         </table>	
         <hr/>
-        <a href="edit_profile.html">Edit</a>
+        <a href="edit_profile.php">Edit</a>
         <br> Back to <a href="settings.html">Settings</a>
     </form>
 </fieldset>
