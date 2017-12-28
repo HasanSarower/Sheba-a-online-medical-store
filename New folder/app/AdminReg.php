@@ -61,13 +61,6 @@
         }
     }
 ?>
-<?php
-	if(!$_POST['password'] == $_POST['confirmPassword'])
-		{
-			$isValid = false;
-			echo "Password not matched";
-		}
-?>
 
 <fieldset>ADD New Admin Credentials</fieldset>
 <br />
