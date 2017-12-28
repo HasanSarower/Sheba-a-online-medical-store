@@ -1,4 +1,4 @@
-<?php require_once "../service/medicine_service.php"; ?>
+<?php require_once "../service/otherProd_service.php"; ?>
 <?php
 	$pro_id= $pro_name = $pro_quan= $pro_price= $total_q = "";
 
@@ -9,6 +9,7 @@
     {
         $ProductID = trim($_GET['pro_id']);                      
         $product = getProductById($ProductID);
+		var_dump($product);
     }
 ?> 
 <?php
