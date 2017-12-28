@@ -50,6 +50,12 @@
             $isValid = false;
             echo "Password must not be less than eight (8) characters<br/>";
         }
+		if(!$_POST['password'] == $_POST['confirmPassword'])
+		{
+			$isValid = false;
+			echo "Password not matched";
+		}
+	
         if($isValid==true){
             $person['name'] = $name;
             $person['email'] = $email;
@@ -78,6 +84,7 @@
         }
     }
 ?>
+
 
 <fieldset>This is message box</fieldset>
 <br />
