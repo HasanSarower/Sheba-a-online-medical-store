@@ -11,12 +11,12 @@
 					 <p><h3>Add/Delete Medicine from DB</p><hr></h3>
 	          <ul align="left">
 	            	<li><a href="add_medicine.php">Add Medicine</a></li>
-	            	<li><a href="update_medicine.php">Update Medicine</a></li>
+	            
 	            	<li><a href="retrieve_medicine.php">Retrieve</a></li>
 	            </ul>
 	             
 	       </tr>
-	       	<tr bgcolor="white" align="center"><td colspan="3"><a href="../dashboard.html">Back</a></td></tr>
+	       	<tr bgcolor="white" align="center"><td colspan="3"><a href="../admin/dashboard.html">Back</a></td></tr>
 		</table>
 		</body>
 </html>
