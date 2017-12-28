@@ -1,6 +1,6 @@
 
 
-<table width="70%" cellspacing="0" cellpadding="10" border="1">
+<table width="70%" cellspacing="0" cellpadding="10" border="1" align="center">
     <tr>
         <td colspan="2" valign="middle" height="70">
             <table width="100%">
@@ -25,7 +25,8 @@
         	<li><a href="./dashboard.html" target="contentFrame">Dashboard</a></li><br>
             <li><a href="../app/AdminReg.php" target="contentFrame"><label>Add New Admin</label></a></li><br>
             <li><a href="../app/add_delete_meds.php" target="contentFrame"><label>Medicine Management</label></a></li><br>
-            <li><a href="../app/add_delete_products.php" target="contentFrame"><label>Add Other Products</label></a></li>
+            <li><a href="../app/add_delete_products.php" target="contentFrame"><label>Add Other Products</label></a></li><br>
+			<li><a href="../app/donor_info.php" target="contentFrame"><label>Donor Informations</label></a></li>
 
         	</ul>
         </font>
