@@ -46,7 +46,7 @@
             if(addPerson($person)==true){
                 echo "<script>
                         alert('Record Added');
-                        document.location='userReg.php';
+                        document.location='AdminReg.php';
                      </script>";
                 die();
             }
