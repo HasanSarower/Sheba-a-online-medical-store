@@ -28,8 +28,7 @@
             <li><a href="User_reports.html" target="contentFrame"><label>User Report</label></a></li>
             <li><a href="../app/AdminReg.php" target="contentFrame"><label>Add New Admin</label></a></li>
             <li><a href="../app/add_delete_meds.php" target="contentFrame"><label>Medicine Management</label></a></li>
-            <li><a href="../app/add_delete_meds.php" target="contentFrame"><label>Add Deal</label></a></li>
-            <li><a href="../app/add_delete_meds.php" target="contentFrame"><label>Add Other Products</label></a></li>
+            <li><a href="../app/add_delete_products.php" target="contentFrame"><label>Add Other Products</label></a></li>
 
         	</ul>
         </font>
