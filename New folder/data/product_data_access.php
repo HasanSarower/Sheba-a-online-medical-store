@@ -31,7 +31,7 @@
         return $product;
     }
      function getProductByIdFromDb($ProductId){
-        $sql = "SELECT * FROM product WHERE id=$ProductID";        
+        $sql = "SELECT * FROM product WHERE pro_id=$ProductId";        
         $result = executeSQL($sql);
         
         $product = mysqli_fetch_assoc($result);
