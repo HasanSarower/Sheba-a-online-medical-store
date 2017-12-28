@@ -9,7 +9,7 @@
 
 	function editProductToDb($Product)
 	{
-		$sql = "UPDATE product SET pro_id='$Product[pro_id]', pro_name='$Product[pro_name]', pro_quan='$Product[pro_quan]',pro_price='$Product[pro_price]' WHERE id=$Product[pro_id]";
+		$sql = "UPDATE product SET pro_name='$Product[pro_name]', pro_quan='$Product[pro_quan]', pro_price='$Product[pro_price]' WHERE pro_id=$Product[pro_id]";
         $result = executeSQL($sql);
         return $result;
 	}
