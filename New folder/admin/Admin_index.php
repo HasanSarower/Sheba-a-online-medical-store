@@ -24,7 +24,6 @@
         	<font size="4">
         	<ul>
         	<li><a href="./dashboard.html" target="contentFrame">Dashboard</a></li>
-        	<li><a href="Notifications.html" target="contentFrame"><label>Notifications</label></a></li>
             <li><a href="User_Management.html" target="contentFrame"><label>User Management</label></a></li>
             <li><a href="User_reports.html" target="contentFrame"><label>User Report</label></a></li>
             <li><a href="../app/AdminReg.php" target="contentFrame"><label>Add New Admin</label></a></li>
