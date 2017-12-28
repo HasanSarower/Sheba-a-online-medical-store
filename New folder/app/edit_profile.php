@@ -1,28 +1,32 @@
-<html>                      
+                     
 <fieldset>This is message box
 		<?php require_once "../service/person_service.php"; ?>
+		<?php $personName = $pEmail =  $Dob ="";
+		?>
 	<?php
 	 //session_start();
-	 if(isset($_GET['id']))
+	// var_dump($_GET['email']);
+	 if(isset($_GET['email']))
     {
-        $personId = trim($_GET['id']);                      
-        $person = getPersonById($personId);
+        $personName = trim($_GET['email']);                      
+        $persons = getPersonsByEmail($personName)[0];
+		//var_dump($persons);
     } 
 	?>
 	<?php
 		if($_SERVER['REQUEST_METHOD']=="POST"){
         
         $personName=trim($_POST['name']);
-        $personEmail=trim($_POST['email']);
-        //$gender=trim($_POST['gender']);
+        $pEmail=trim($_POST['email']);
+        
         $Dob=trim($_POST['dob']);
        	 	
 
         //$person['id'] = $id;
-        $person['name'] = $personName;
-        $person['email'] = $personEmail;
-        //$person['gender'] = $gender;
-        $person['dob'] = $Dob;
+        $persons['uName'] = $personName;
+        $persons['email'] = $pEmail;
+      
+        $persons['dob'] = $Dob;
         }
 	?>
 </fieldset>
@@ -41,7 +45,7 @@
             <tr>
                 <td>Name</td>
                 <td>:</td>
-                <td><input name="name" type="text" value="<?=$person['name']?>"></td>
+                <td><input name="name" type="text" value="<?=$persons['uName']?>"></td>
                 <td></td>
             </tr>		
             <tr><td colspan="4"><hr/></td></tr>
@@ -49,7 +53,7 @@
                 <td>Email</td>
                 <td>:</td>
                 <td>
-                    <input name="email" type="text" value="<?= $person['email']?>">
+                    <input name="email" type="text" value="<?= $persons['email']?>">
                     <abbr title="hint: sample@example.com"><b>i</b></abbr>
                 </td>
                 <td></td>
@@ -70,7 +74,7 @@
                 <td valign="top">Date of Birth</td>
                 <td valign="top">:</td>
                 <td>
-                    <input name="dob" type="text" value="<?= $person['dob']?>">
+                    <input name="dob" type="text" value="<?= $persons['dob']?>">
                     <font size="2"><i>(dd/mm/yyyy)</i></font>
                 </td>
                 <td></td>
@@ -80,4 +84,3 @@
         <input type="submit" value="Save">	
        <br> Back to <a href="settings.html">Settings</a>
     </form>
-	</html>
