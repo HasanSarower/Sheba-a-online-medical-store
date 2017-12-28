@@ -64,15 +64,15 @@
     <form method="post">
         <table border="0" cellspacing="0" cellpadding="3">
             <tr>
-                <td>Id</td>
-                <td><input name="id" value="<?= $pro_id ?>"/></td>
+                <td width="20%">Product ID</td>
+                <td>:</td>
+                <td><input name="pro_id" value="<?= $pro_id ?>"/></td>
                 
             </tr> 
             <tr>
                 <td width="20%">Product Name</td>
                 <td>:</td>
-                <td><input name="pro_name" value="<?= $product['pro_name']; ?>"/></td>
-                
+                <td><input name="pro_name" value="<?= $product['pro_name']; ?>"/></td>  
             </tr>
             
 			<tr>
