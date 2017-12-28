@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2017 at 09:03 AM
+-- Generation Time: Dec 28, 2017 at 11:18 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -51,6 +51,29 @@ INSERT INTO `customer` (`id`, `name`, `email`, `uName`, `pswrd`, `gender`, `dob`
 (7, 'sahil aryan', 'sami@yahoo.com', 'sami', '258', 'male', '2004-03-22', 'A+', 0),
 (8, '', '', 'faysal', '123', '', '', '', 0),
 (9, '', '', 'faad', '123', '', '', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donate_blood`
+--
+
+CREATE TABLE `donate_blood` (
+  `donor_id` int(100) UNSIGNED NOT NULL,
+  `donar_name` varchar(100) NOT NULL,
+  `donar_BG` varchar(100) NOT NULL,
+  `donar_contact` varchar(100) NOT NULL,
+  `donar_area` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `donate_blood`
+--
+
+INSERT INTO `donate_blood` (`donor_id`, `donar_name`, `donar_BG`, `donar_contact`, `donar_area`) VALUES
+(3, 'hasan', 'A+', '1757049684', 'Mirpur'),
+(4, 'anika', 'A+', '01584796325', 'Gulshan'),
+(5, 'Faysal', 'O+', '01698521478', 'Banani');
 
 -- --------------------------------------------------------
 
@@ -106,8 +129,28 @@ INSERT INTO `medicine` (`id`, `med_name`, `indication`, `generic`, `price`, `qua
 (9, 'Cephalexin', 'Cephalosporin Antibiotic', 'Keflex', 0, 0, 5),
 (10, 'Atenolol', 'Antihypertensive', 'Tenormin', 0, 0, 0),
 (12, 'ace', 'diabetes', 'Ace', 6, 25, 0),
-(13, 'Napa Extra', '', 'Paracitamol', 0, 0, 33),
-(14, 'Xiril', '', '', 20, 5, 0);
+(13, 'Napa Extra', '', 'Paracitamol', 0, 0, 33);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_report`
+--
+
+CREATE TABLE `order_report` (
+  `orderId` int(100) UNSIGNED NOT NULL,
+  `orderName` varchar(100) NOT NULL,
+  `orderQuantity` int(100) NOT NULL,
+  `orderCost` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_report`
+--
+
+INSERT INTO `order_report` (`orderId`, `orderName`, `orderQuantity`, `orderCost`) VALUES
+(1, 'ace', 5, 30),
+(2, 'Zero Cal. Sugar', 1, 200);
 
 -- --------------------------------------------------------
 
@@ -146,6 +189,12 @@ ALTER TABLE `customer`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `donate_blood`
+--
+ALTER TABLE `donate_blood`
+  ADD PRIMARY KEY (`donor_id`);
+
+--
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
@@ -158,6 +207,12 @@ ALTER TABLE `medicine`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `order_report`
+--
+ALTER TABLE `order_report`
+  ADD PRIMARY KEY (`orderId`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -166,6 +221,11 @@ ALTER TABLE `medicine`
 --
 ALTER TABLE `customer`
   MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `donate_blood`
+--
+ALTER TABLE `donate_blood`
+  MODIFY `donor_id` int(100) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `login`
 --
@@ -176,6 +236,11 @@ ALTER TABLE `login`
 --
 ALTER TABLE `medicine`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT for table `order_report`
+--
+ALTER TABLE `order_report`
+  MODIFY `orderId` int(100) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
