@@ -56,7 +56,7 @@
                 <td><?= $Product['pro_name'] ?></td>
                 <td><?= $Product['pro_quan'] ?></td>
 				<td><?= $Product['pro_price'] ?></td>
-                <td><a href="buy_product.php?id=<?= $Product['pro_id'] ?>">buy</a></td>
+                <td><a href="buy_product.php?pro_id=<?= $Product['pro_id'] ?>">buy</a></td>
             </tr>
         <?php }
          ?>
