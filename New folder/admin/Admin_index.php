@@ -23,10 +23,9 @@
         	<font size="4">
         	<ul>
         	<li><a href="./dashboard.html" target="contentFrame">Dashboard</a></li><br>
-            <li><a href="../app/AdminReg.php" target="contentFrame"><label>Add New Admin</label></a></li><br>
             <li><a href="../app/add_delete_meds.php" target="contentFrame"><label>Medicine Management</label></a></li><br>
             <li><a href="../app/add_delete_products.php" target="contentFrame"><label>Add Other Products</label></a></li><br>
-			<li><a href="../app/donor_info.php" target="contentFrame"><label>Donor Informations</label></a></li>
+		<li><a href="../app/donor_info.php" target="contentFrame"><label>Donor Informations</label></a></li>
 
         	</ul>
         </font>
