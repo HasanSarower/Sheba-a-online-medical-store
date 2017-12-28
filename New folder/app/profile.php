@@ -6,8 +6,8 @@
 <?php
     if(isset($_SESSION['uName']))
     {
-        //$personUname = trim($_GET['uName']);                      
-        $persons = getAllPersons();
+        $personUname = trim($_SESSION['uName']);                      
+        $persons = getPersonsByEmail($personUname);
     }
 ?> 
 <?php
