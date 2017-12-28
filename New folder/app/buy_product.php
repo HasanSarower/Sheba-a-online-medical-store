@@ -9,7 +9,7 @@
     {
         $ProductID = trim($_GET['pro_id']);                      
         $product = getProductById($ProductID);
-		var_dump($product);
+		
     }
 ?> 
 <?php
