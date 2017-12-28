@@ -42,8 +42,27 @@
         
         return $medicines;
     }
+	function getAllDonorsFromDb(){
+        $sql = "SELECT * FROM donate_blood";        
+        $result = executeSQL($sql);
+        
+        $donors = array();
+        for($i=0; $row=mysqli_fetch_assoc($result); ++$i){
+            $donors[$i] = $row;
+        }
+        
+        return $donors;
+    }
      function getMedicineByIdFromDb($medicineId){
         $sql = "SELECT * FROM medicine WHERE id=$medicineId";        
+        $result = executeSQL($sql);
+        
+        $medicine = mysqli_fetch_assoc($result);
+        
+        return $medicine;
+    } 
+	function getDonorsByIdFromDb($donorId){
+        $sql = "SELECT * FROM donate_blood WHERE id=$donorId";        
         $result = executeSQL($sql);
         
         $medicine = mysqli_fetch_assoc($result);
@@ -61,8 +80,31 @@
         
         return $medicines;
     }
+	
+	function getDonorsByNameFromDb($DName){
+        $sql = "SELECT * FROM donate_blood WHERE donar_name LIKE '%$DName%'";
+        $result = executeSQL($sql);
+        
+        $donors = array();
+        for($i=0; $row = mysqli_fetch_assoc($result); ++$i){
+            $donors[$i] = $row;
+        }
+        
+        return $donors;
+    }
+	
     function getByMedicineNameOrIdFromDb($key){
         $sql = "SELECT * FROM medicine WHERE med_name LIKE '%$key%' OR id LIKE '%$key%'";
+        $result = executeSQL($sql);
+        
+        $medicines = array();
+        for($i=0; $row = mysqli_fetch_assoc($result); ++$i){
+            $medicines[$i] = $row;
+        }
+        return $medicines;
+    }
+	function getByDonorsNameOrIdFromDb($key){
+        $sql = "SELECT * FROM donate_blood WHERE donar_name LIKE '%$key%' OR donor_id LIKE '%$key%'";
         $result = executeSQL($sql);
         
         $medicines = array();
