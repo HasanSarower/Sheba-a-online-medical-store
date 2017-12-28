@@ -7,7 +7,12 @@
 	function editMedicine($medicine)
 	{
         return editMedicineToDb($medicine);
-    }
+    	}
+	function donateBlood($blood)
+	{
+		return donateBLoodToDb($blood);
+	}
+	
     function buyMedicine($medicine)
     {
         return buyMedicineToDb($medicine);
