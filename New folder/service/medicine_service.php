@@ -23,14 +23,26 @@
      function getAllMedicines(){
         return getAllMedicinesFromDb();
     }
+	 function getAllDonors(){
+        return getAllDonorsFromDb();
+    }
     function getMedicineById($medicineId){
         return getMedicineByIdFromDb($medicineId);
+    }
+	function getDonorsById($medicineId){
+        return getDonorsByIdFromDb($medicineId);
     }
     function getMedicinesByName($meDName){
         return getMedicinesByNameFromDb($meDName);
     }
+	function getDonorsByName($DName){
+        return getDonorsByNameFromDb($DName);
+    }
     function getMedicinesByIdOrName($key){
         return getByMedicineNameOrIdFromDb($key);
+    }
+	function getDonorsByIdOrName($key){
+        return getByDonorsNameOrIdFromDb($key);
     }
     function getMedicineByIndication($Indication){
     	return getMedicineByIndicationFromDb($Indication);
